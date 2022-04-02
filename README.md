@@ -4,7 +4,7 @@ This is a NFT minter app that allow users to connect to the blockchain and mint 
 
 ## How to use the minter
 
-The application can be found [here](https://www.nft-minter.netlify.app). Make sure you have [Metamask installed](https://metamask.io/).
+The application can be found [here](https://bespoke-pudding-5503e7.netlify.app). Make sure you have [Metamask installed](https://metamask.io/).
 
 ## Smart Contract Address
 

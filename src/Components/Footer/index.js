@@ -5,6 +5,7 @@ import Icon1 from '../../Images/Signature2_tr_031672.png';
 import { ReactComponent as IconTwitter } from '../../Images/twitter.svg';
 import { ReactComponent as IconOpenSea } from '../../Images/opensea.svg';
 import { ReactComponent as IconEtherscan } from '../../Images/etherscan.svg';
+import { ReactComponent as IconGithub } from '../../Images/github.svg';
 
 const Footer = () => {
     const toggleHome = () => {
@@ -48,6 +49,14 @@ const Footer = () => {
                   aria-label='Smart Contract'
                 >
                   <IconEtherscan />
+                </f.SocialIconLink>
+                <f.SocialIconLink
+                  href='https://github.com/joestakey/nft-minter-app-evm'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label='Github'
+                >
+                  <IconGithub />
                 </f.SocialIconLink>
               </f.SocialIcons>
             </f.SocialMediaWrap>
