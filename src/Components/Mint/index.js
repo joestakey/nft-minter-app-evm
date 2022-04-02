@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { updateNftIndex } from '../../Redux/nftAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { ethers, BigNumber } from 'ethers';
@@ -29,8 +29,7 @@ import video from '../../Images/polynians_background.png';
 import ImgSignature from '../../Images/Signature2_tr_W.png';
 import { connectWallet } from '../../Utils/interact';
 import contractAbi from '../../Ethereum/contractAbi.json';
-import {network, PRICE_ONE_NFT } from '../../constants.js';
-
+import { network, PRICE_ONE_NFT } from '../../constants.js';
 
 //change here the network you want your app to connect to
 const { chainId, name, currency } = network.polygon;
@@ -80,7 +79,7 @@ const Mint = () => {
 
   useEffect(() => {
     async function updateNetwork() {
-      console.log(nftIndex)
+      console.log(nftIndex);
       if (firstLoadNetwork.current) {
         console.log('UseEffectNetwork is happening :)');
         getCurrentNetworkConnected();
@@ -91,18 +90,16 @@ const Mint = () => {
     }
     updateNetwork();
   }, [status]);
-  
+
   useEffect(() => {
     async function goToPostMint() {
       if (firstLoadGoToPostMint.current) {
-        
-        console.log('GoToPostMint is happening :)');      
+        console.log('GoToPostMint is happening :)');
         console.log(nftIndex);
         setIsLoading(false);
         history.push('/postmint');
       } else {
         console.log('correct path goToPostMint :)');
-        
       }
     }
     goToPostMint();
@@ -173,7 +170,9 @@ const Mint = () => {
       try {
         setMessage('Waiting for the transaction to be mined...');
         const tx = await contract.mint(BigNumber.from(numberNFTs), {
-          value: ethers.utils.parseEther((PRICE_ONE_NFT * numberNFTs).toString()),
+          value: ethers.utils.parseEther(
+            (PRICE_ONE_NFT * numberNFTs).toString()
+          ),
         });
         const receipt = await tx.wait();
         console.log(receipt);
@@ -249,7 +248,9 @@ const Mint = () => {
                   </ButtonButt>
                 </BtnWrapper>
                 <MintLabel>
-                  {`Your minting cost is: ${numberNFTs * PRICE_ONE_NFT} ${currency}`}
+                  {`Your minting cost is: ${
+                    numberNFTs * PRICE_ONE_NFT
+                  } ${currency}`}
                 </MintLabel>
                 <MintStatus>{status}</MintStatus>
               </MintLabelDiv>
