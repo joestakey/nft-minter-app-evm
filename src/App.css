@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Chelsea+Market:wght@300;400;700&display=swap);
+
+
+*,
+*::after,
+*::before {  
+  margin: 0;
+  padding: 0;
+  font-family: 'Chelsea Market',
+  sans-serif;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  background: #83d0f5;
+  display: block;
+  overflow-y: scroll;
+  min-height: 100%;
+
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+}
+
+video {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+div {
+  color: #031672;
+}
